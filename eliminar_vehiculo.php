@@ -5,18 +5,18 @@ require "conexion.php";
 $id = $_GET["id"];
 //echo $id;
 
-$eliminar = "DELETE FROM servicio WHERE id_servicio = $id";
+$eliminar = "DELETE FROM vehiculo WHERE id_vehiculo = $id";
 
 $query = mysqli_query($conectar, $eliminar);
 
 if ($query){
   echo "
   <script>
-  alert( 'Servicio eliminado de la BD' );
-  location.href= 'servicios.php'
+  alert( 'Vehiculo eliminado de la base de datos' );
+  location.href= 'vehiculos.php'
   </script>
   ";
 }
 else{
-  echo "TRONÓ";
+  echo "Error al intentar eliminar vehiculo";
 }

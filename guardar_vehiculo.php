@@ -2,14 +2,14 @@
 
 require "conexion.php";
 
-$tipo = $_POST["tipo"];
+$marca = $_POST["marca"];
+$modelo = $_POST["modelo"];
+$año = $_POST["año"];
 $precio = $_POST["precio"];
-$tiempo = $_POST["tiempo"];
-$area = $_POST["area"];
 
-$rutaTemporal = $_FILES['foto']['tmp_name'];
-$nombreImg = $_FILES['foto']['name'];
-$tipoImg = $_FILES['foto']['type'];
+$rutaTemporal = $_FILES['imagen']['tmp_name'];
+$nombreImg = $_FILES['imagen']['name'];
+$tipoImg = $_FILES['imagen']['type'];
 
 $rutaEnServidor = 'fotos';
 
@@ -42,7 +42,7 @@ if($pesoImg > 999000) {
   exit;
 }
 
-$insertar = "INSERT INTO servicio (tipo, precio, tiempo, area, imagen) VALUES ('$tipo', '$precio', '$tiempo', '$area', '$rutaDestino')";
+$insertar = "INSERT INTO vehiculo (marca, modelo, año, precio, imagen) VALUES ('$marca', '$modelo', '$año', '$precio', '$rutaDestino')";
 
 $query = mysqli_query($conectar, $insertar);
 
@@ -50,10 +50,10 @@ if ($query){
   echo "
   <script>
     alert( 'Datos guardados exitosamente' );
-    location.href= 'servicios.php'
+    location.href= 'vehiculos.php'
   </script>
   ";
 } else{
-  echo "Error al intentar guardar el servicio";
+  echo "Error al intentar guardar el vehiculo";
 }
 

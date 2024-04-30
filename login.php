@@ -11,11 +11,11 @@
 
     <div class="cont_login">
         <br>
-        <h2>LOGIN PANEL ADMINISTRATIVO</h2>
+        <h2>CONCESIONARIA ???</h2>
         <br>
         <hr>
         <br><br>
-        <a href="index.php">Inicio</a>
+        <a href="index.php">Pantalla principal</a>
         <br><br>
 
         <form action="autentificar.php" method="post">

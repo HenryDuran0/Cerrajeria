@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Concesionaria ???</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,56 +13,44 @@
     ?>
 
     <div class="cont3">
-        <img src="Images/slide.png" alt="" class="img_slide">
+        <img src="Images/slide.jpg" alt="" class="img_slide">
         <div class="img_text">
-            <h1>Cerrajería MasterKey</h1>
-            <h2>Tu tranquilidad es nuestra misión</h2>
-            <a href="citas.php">Agenda una cita</a>
+            <h1>Concesionaria ???</h1>
+            <h2>Vehículos para todos</h2>
+            <a href="citas.php">Carrito</a>
         </div>
     </div>
 
     <div class="cont4">
        <div class="div_txt_cont4">
-            <h2>Contamos con diversos servicios para usted</h2>
+            <h2>Contamos con el vehículo de tus sueños</h2>
             <br><br>
-            <h3>Realizado con todas las normal legales y aplicando los más altos estándares de calidad en cada servicio.</h3>
+            <h3>¡No te quedes esperando! Estrena ya.</h3>
        </div>
     </div>
     
     <div class="cont5">
-        <table class="tab_serv">
-            <tr class="tab_header">
-                <th>Imagen</th>
-                <th>Servicio</th>
-                <th>Duración</th>
-                <th>Área de cobertura</th>
-                <th>Precio</th>
-            </tr>
+        
+        <?php
+            require "conexion.php";
+            $todos_datos = "SELECT * FROM vehiculo ORDER BY id_vehiculo ASC";
+            $resultado = mysqli_query($conectar, $todos_datos);
 
-            <?php
-                require "conexion.php";
-                $todos_datos = "SELECT * FROM servicio ORDER BY id_servicio ASC";
-                $resultado = mysqli_query($conectar, $todos_datos);
+            while ($fila = mysqli_fetch_assoc($resultado)){
+        ?>
+            <div class="cont_auto">
+                <img class="foto" src="<?php echo $fila["imagen"] ?>"> 
+                <br><br>
+                <h2><?php echo $fila["marca"].' '.$fila["modelo"].' '.$fila["año"]?></h2>
+                <br>
+                <p><?php echo '$'.$fila["precio"] ?></p>
+            </div>
 
-                while ($fila = mysqli_fetch_assoc($resultado)){
-            ?>
-                <tr class="table_rows">
-                    <td class ="cont_fotos">
-                        <img class="foto" src="<?php echo $fila{"imagen"} ?>"> 
-                    </td>
-                    <td><?php echo $fila{"tipo"} ?></td>
-                    <td><?php echo $fila{"tiempo"} ?></td>
-                    <td><?php echo $fila{"area"} ?></td>
-                    <td><?php echo '$'.$fila{"precio"} ?></td>
-                </tr>
-            <?php
+        <?php
             }
-            ?>
-            
-        </table>
+        ?>
     </div>
     <br><br><br><br><br><br>
-
     
     <?php
         include("footer.php");

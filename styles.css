@@ -8,16 +8,16 @@
 /* Header */
 
 .cont1 {
-    background-color: #E1C78F;
+    background-color: #77B0AA;
     height: 200px;
 }
 
 .div_logo {
     float: left;
-    padding: 30px;
     margin-left: 100px;
     width: 200px;
     height: inherit;
+    /* border: red solid; */
 }
 
 .img_logo {
@@ -71,11 +71,11 @@
     margin-top: 3px;
     font-size: 200%;
     font-weight: bolder;
-    color: #B0926A;
+    color: #135D66;
 }
 
 .cont2 a:hover {
-    background-color: #B0926A;
+    background-color: #003C43;
     color: white;
 }
 
@@ -100,14 +100,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #706233;
+    color: #E3FEF7;
     
 }
 
 .img_text h1 {
     font: 6.8em 'New Times Roman';
     font-weight: bold;
-    text-shadow: 4px 4px 0 white;
+    text-shadow: 4px 4px 0 #003C43;
     width: 1300px;
 }
 
@@ -115,12 +115,12 @@
     font: 2em 'New Times Roman';
     font-weight: bold;
     font-style: italic;
-    text-shadow: 2px 2px 0 white;
+    text-shadow: 2px 2px 0 #003C43;
 }
 
 .img_text a {
     display: inline-block;
-    background-color: #B0926A;
+    background-color: #003C43;
     color: white;
     padding: 15px 40px;
     margin-top: 40px;
@@ -143,7 +143,7 @@
 .div_txt_cont4 h2 {
     font: 5em 'New Times Roman';
     font-weight: bold;
-    color: #B0926A;
+    color: #77B0AA;
 
 }
 
@@ -151,34 +151,46 @@
     font-size: 1.5em;
     font-weight: lighter;
     /* border: red solid; */
-    color: #B0926A;
+    color: #77B0AA;
     width: 740px;
     margin: auto;
 }
 
-/* Tabla servicios (index)*/
+/* Tarjetas vehiculos (index)*/
 
 .cont5 {
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flexbox;
 }
+
+.cont_auto {
+    margin: 1em;
+    padding: 1em;
+    border-radius:15px;
+    background-color: #003C43;
+    color: white;
+    display: inline-block;
+    width: fit-content;
+}
+
+.foto {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border-radius:15px;
+}
+
+/* Tabla vehiculos (panel admmin) */
 
 .tab_serv {
     margin: auto;
     text-align: center;
     width: 1200px;
     height: 400px;
-    background-color: #B0926A;
+    background-color: #003C43;
     color: white;
     font-size: 1.5em;
-}
-
-.foto {
-    object-fit: cover;
-    width: 100px;
-    height: 100px;
-    border-radius:15px ;
 }
 
 .cont_fotos {
@@ -194,20 +206,16 @@
     border-right: 1px white solid;
 }
 
+
 /* Footer */
 
 .cont6 {
     margin: auto;
-    background-color: #706233;
+    background-color: #003C43;
     height: 200px;
+    /* width: 400px; */
     display: flex;
 } 
-
-.cont6 img {
-    padding-left: 6em;
-    padding-top: .2em;
-    scale: 90%;
-}
 
 .cont6 h2 {
     color: white;
@@ -216,7 +224,7 @@
     margin: auto;
     text-align: center;
     width: 20em;
-    margin-top: 1em;
+    margin-top: 1.5em;
 }
 
 .cont6 p {
@@ -388,10 +396,10 @@
 .cont_login {
     margin: auto;
     height: 500px;
-    width: 1500px;
+    width: 800px;
     padding: 1em;
     text-align: center;
-    background-color: #B0926A;
+    background-color: #003C43;
 }
 
 .cont_login h2 {
@@ -434,23 +442,23 @@
     font-size: 1em;
 }
 
-/* Servicios */
+/* Agregar vehiculo */
 
-.nuevo_serv {
+.nuevo_vehiculo {
     margin: auto;
     margin-top: 5em;
-    background-color: #B0926A;
+    background-color: #003C43;
     text-align: center;
     width: 1000px;
     height: 600px;
 }
 
-.nuevo_serv h1 {
+.nuevo_vehiculo h1 {
     padding-top: 20px;
     color: white;
 }
 
-.form_serv {
+.form_vehiculo {
     vertical-align: middle;
     width: inherit;
     margin: auto;
@@ -458,26 +466,26 @@
     position: relative;
 }
 
-.form_serv label {
+.form_vehiculo label {
     color: white;
     font-size: 1.8em;
     float: left;
 }
 
-.form_serv input {
+.form_vehiculo input {
     font-size: 1.8em;
     border: none;
     float: right;
 }
 
-.form_serv input[type=file] {
+.form_vehiculo input[type=file] {
     width: 270px;
     margin-left: 115px;
     position: absolute;
 }
 
-.btn_guard_serv {
-    background-color: #706233;
+.btn_guard_vehiculo {
+    background-color: #135D66;
     color: white;
     border: none;
     font-weight: bold;
@@ -610,12 +618,12 @@
 }
 
 .cont_ag_us h2 {
-    color: #B0926A;
+    color: #135D66;
     font-size: 3em;
 }
 
 .form_usua {
-    background-color: #B0926A;
+    background-color: #003C43;
     color: white;
     width: 500px;
     margin: auto;
@@ -629,7 +637,7 @@
 }
 
 .form_usua button {
-    background-color: #E1C78F;
+    background-color: #135D66;
     color: white;
     border: none;
     width: 150px;
@@ -648,15 +656,15 @@
     cursor: pointer;
 } 
 
-/* CITAS */
+/* recuperar_pswd */
 
-.cont_cita {
+.cont_rec_pswd {
     margin: auto;
     /* border: red solid; */
 }
 
-.formu_cita {
-    background-color: #B0926A;
+.formu_rec_pswd {
+    background-color: #003C43;
     color: white;
     width: fit-content;
     margin: auto;
@@ -665,11 +673,11 @@
     font-size: 2em;
 }
 
-.formu_cita label {
+.formu_rec_pswd label {
     margin-top: 20px;
 }
 
-.formu_cita input {
+.formu_rec_pswd input {
     height: 30px;
     margin-top: -20px;
     font-size: .7em;
@@ -678,23 +686,47 @@
     margin-top: 5px;
 }
 
-.formu_cita button {
+.formu_rec_pswd button {
     width: 150px;
     height: 40px;
     font-size: .7em;
     float: right;
 }
 
-/* recuperar contraseña */
-
-.cont_rec1 {
+.cont_codigo {
+    /* border: red solid; */
     margin: auto;
-    border: red solid;
 }
 
+.formu_codigo {
+    background-color: #003C43;
+    color: white;
+    width: fit-content;
+    margin: auto;
+    text-align: left;
+    padding: 2em;
+    font-size: 2em;
+}
 
+.formu_codigo label {
+    margin-top: 20px;
+}
 
+.formu_codigo input {
+    height: 30px;
+    margin-top: -20px;
+    font-size: .7em;
+    margin-left: 5px;
+    float: right;
+    margin-top: 5px;
+}
 
+.formu_codigo button {
+    width: 150px;
+    height: 40px;
+    font-size: .7em;
+    float: right;
+}
 
 
 

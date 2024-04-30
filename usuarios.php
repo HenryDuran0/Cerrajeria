@@ -14,7 +14,7 @@
 
     <div class="cont2">
         <a href="panel.php">INICIO</a>
-        <a href="servicios.php">SERVICIOS</a>
+        <a href="vehiculos.php">VEHICULOS</a>
         <a href="usuarios.php">USUARIOS</a>
         <a href="salir.php">CERRAR SESIÓN</a>
     </div>
